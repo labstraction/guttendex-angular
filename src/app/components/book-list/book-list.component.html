@@ -3,6 +3,7 @@
     *ngFor="let book of bookServ.books()"
     [book]="book"
     (bookSelected)="cardSelected($event)"
+    [hasButton]="true"
     ></app-book-card>
     <button (click)="getMoreBooks()">more...</button>
 </div>

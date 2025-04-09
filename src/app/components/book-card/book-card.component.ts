@@ -1,10 +1,11 @@
 import { Component, inject, input, numberAttribute, output } from '@angular/core';
 import { Book } from '../../model/book';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-book-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './book-card.component.html',
   styleUrl: './book-card.component.scss'
 })
@@ -12,6 +13,7 @@ export class BookCardComponent {
 
   book = input<Book>()
   bookSelected = output<Book | undefined>();
+  hasButton = input<boolean>(false)
 
   resizeTitle(title: string, maxWords:number) {
     const wordsArray = title.split(' ');

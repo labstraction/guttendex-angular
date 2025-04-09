@@ -1,5 +1,5 @@
 <div class="container">
     <img src="{{book()?.formats?.['image/jpeg']}}" alt="">
     <span>{{book()?.title}}</span>
-    <button (click)="selectBook()">select me!</button>
+    <button *ngIf="hasButton()"  (click)="selectBook()">select me!</button>
 </div>
